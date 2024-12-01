@@ -1,0 +1,97 @@
+.testimonial-section{
+    height: auto; 
+}
+
+.content-card {
+    box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48);
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 10px;
+    color: black;
+}
+.content-card:hover{
+    background-color: brown;
+    color: white;
+    box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48) inset;
+    -webkit-box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48) inset;
+    -moz-box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48) inset;
+    transition-duration: 1s;
+    cursor: pointer;
+} 
+.content-card img{
+    height: 80px;
+    width: 80px;
+    border-radius:90px ;
+    object-fit: cover;
+    margin-top: -30px;
+    border: 3px solid rgb(249, 249, 123);
+}
+
+.marked-content-card{
+    background-color: brown;
+    padding: 10px;
+    color: white;
+    margin-top: 50px;
+}
+
+.marked-content-card :hover{
+    box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48) inset;
+    -webkit-box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48) inset;
+    -moz-box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.48) inset;
+    transition-duration: 1s;
+}
+
+.marked-content-card img{
+    height: 80px;
+    width: 80px;
+    border-radius:90px ;
+    object-fit: cover;
+    margin-top: -30px;
+    border: 3px solid rgb(249, 249, 123);
+}
+
+.content-card img:hover{
+    height: 80px;
+    width: 80px;
+    border-radius:90px ;
+    object-fit: cover;
+    margin-top: -30px;
+    border: 3px solid white;
+}
+.name{
+    font-weight: 20px;
+    color: rgb(85, 99, 244);
+    font-size: 20px;
+}
+.load--more-button{
+    background-color: #38004c;
+    width: 15%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.load--more-button:hover{
+    background-color: #a812df;
+    width: 15%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
