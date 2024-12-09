@@ -5,7 +5,12 @@ import About from "./components/About/About";
 import Service from "./components/Service/Service";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Suscription from "./components/Suscription/Suscription";
+import Footer from "./components/Footer/Footer";
+import Team from "./components/Team/Team";
+import Feedback from "./components/Feedback/Feedback";
+import "./App.css"
 import ScrollToTop from "react-scroll-to-top"
+
 
 function App() {
   return (
@@ -14,9 +19,12 @@ function App() {
           <Home/>
           <About/>
           <Service/>
+          <Team/>
           <Testimonial/>
+          <Feedback/>
           <Suscription/>
-          
+          <Footer/>
+
           <ScrollToTop smooth
           color="white"
           height="20"

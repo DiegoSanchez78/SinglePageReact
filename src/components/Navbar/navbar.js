@@ -1,17 +1,52 @@
-import React from "react";
+import React,{useState} from "react";
 import "./navbar.css"
+import {Link} from 'react-scroll';
 
 const Navbar = ()=>{
+
+    const [navScrollColor, setnavScrollColor] = useState(false);
+
+    const onChangeNavColor = ()=> {
+        if(window.scrollY>=100){
+            setnavScrollColor(true)
+        }else{
+            setnavScrollColor(false)
+        }
+    };
+
+    window.addEventListener("scroll", onChangeNavColor);
+
     return(
-        <nav className="navbar-main">
+        <nav className={navScrollColor ? "navbar-scroll-color navbar-main":"navbar-main"}>
             <ul>
-                <li className="navitem">Home</li>
-                <li className="navitem">About</li>
-                <li className="navitem">Service</li>
+                <li className="navitem">
+                    <Link to="home" spy={true} smooth={true} offset={-100} duration={300}>
+                    Home
+                    </Link>
+                </li>
+                <li className="navitem">
+                    <Link to="about" spy={true} smooth={true} offset={-100} duration={300}>
+                    About
+                    </Link>
+                </li>
+                <li className="navitem">
+                    <Link to="services" spy={true} smooth={true} offset={-100} duration={300}>
+                    Service
+                    </Link>
+                </li>
                 <li className="navitem">Career</li>
                 <li className="navitem">Video</li>
-                <li className="navitem">Team</li>
-                <li className="navitem">Testimonial</li>
+                <li className="navitem">
+                <Link to="team" spy={true} smooth={true} offset={-100} duration={300}>
+                        Team
+                    </Link>
+                </li>
+                
+                <li className="navitem">
+                    <Link to="testimonial" spy={true} smooth={true} offset={-100} duration={300}>
+                        Testimonial
+                    </Link>
+                </li>
                 <li className="navitem">Home</li>
                 <li className="navitem">Feedback</li>
                 <li className="navitem">Contact</li>

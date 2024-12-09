@@ -7,11 +7,20 @@
     top: 0;
     text-align: center;
     justify-content: right; 
+    position: sticky;
+    z-index: 1;
+}
+
+.navbar-scroll-color{
+    background-color: #38004c;
 }
 
 .navbar-main ul {
     display: flex;
     margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
 }
 
 .navbar-main ul li{
@@ -24,4 +33,7 @@
 }
 .navbar-main ul li:hover {
     color: yellow;
+}
+.navitem .active{
+    color:  yellow ;
 }

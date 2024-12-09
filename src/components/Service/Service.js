@@ -77,7 +77,7 @@ const Service = () => {
   ]
 
     return (
-        <div className='container service-section'>
+        <div className='container service-section' id='services'>
             <div className='section-title'>
                 <h5>Servicios</h5>
                 <span className='line'></span>

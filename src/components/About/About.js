@@ -7,7 +7,7 @@ import { FcAutomotive,FcBusiness,FcCompactCamera   } from "react-icons/fc";
 
 const About = () => {
   return (
-    <div className='container about-section'>
+    <div className='container about-section' id='about'>
         <div className='row'>
             <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
                 <div className='about-image'>

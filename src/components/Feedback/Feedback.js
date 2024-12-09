@@ -1,7 +1,11 @@
-import React,{useState} from 'react'
-import "./testimonial.css"
+import React from 'react'
+import "./feedback.css"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Testimonial = () => {
+const Feedback = () => {
+
     const data = [
         {
             "img":"https://media.istockphoto.com/id/1475804411/es/foto/sonriente-joven-hispana-trabajadora-aut%C3%B3noma-de-pie-en-el-estudio-con-una-computadora-port%C3%A1til.jpg?s=612x612&w=is&k=20&c=HTyo_zO_cbZw05e6FkGJCofgTs5Z3XY400fsDX4-dLE=",
@@ -59,41 +63,43 @@ const Testimonial = () => {
         },
     ]
 
-    const [showMorePost,setshowMorePost] = useState(6);
-
-    const loadMore =()=> {
-        setshowMorePost((prev)=> prev + 3);
-    }
+    var settings = {
+        dots:true,
+        infinite:true,
+        speed:500,
+        slidesToShow:2,
+        // slidesToScroll:1,
+        adaptiveHeight:true,
+        initialSlide: 0,
+        autoplay:true,
+        rows:1,
+    };
 
   return (
-    <div className='container testimonial-section' id='testimonial'>
-        <div className='section-title'>
-            <h5>Testimonios</h5>
-            <span className='line'></span>
-        </div>
-        <div className='row'>
-            {data.slice(0,showMorePost).map((item,index)=>(
-                <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' key={index}> 
-                    
-                    <div className={index===0 ?"marked-content-card":"content-card"}>
-                        <img src={item.img} alt='foto persona testimonio'/>
-                        <p>{item.content}</p>
-                        <span className='name'>{item.name}</span>
-                        <p>{item.position}</p>
+    <div className='container feedbck-slider'>
+         <div className='section-title'>
+                <h5>Feedback</h5>
+                <span className='line'></span>
+            </div>
+            
+            <div className='feedbck-slide'>
+            <Slider {...settings}>
+                {data.map((item,index)=>(
+                    <div className='col-xl-12 col-lg-12 col-md-12 col-sm-12'> 
+                        <div className='card content-slider' key={index}>
+                            <img src={item.img} alt='imagen carrusel' className='center-image'/>
+                            <p>{item.content}</p>
+                            <h4>{item.name}</h4>
+                            <p>{item.position}</p>
+                        </div>
+                        
                     </div>
-                </div>
-            ))}
-
-            {showMorePost >= data.length ? null:(
-            <span className='load--more-button' onClick={loadMore}>
-                Ver mas
-            </span>
-            )}
-
-        </div>
-
+                ))}
+                 </Slider>
+            </div>
+           
     </div>
   )
 }
 
-export default Testimonial
+export default Feedback

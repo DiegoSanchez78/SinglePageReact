@@ -1,0 +1,54 @@
+.footer {
+    height: auto;
+    margin: 0px;
+    background-color: #030749;
+    margin-top: 60px;
+}
+
+.footer-about-section{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+.social-icons{
+    display: flex;
+    color: orange;
+    cursor: pointer;
+}
+
+.social-icons p{
+    margin: 3px;
+}
+
+.footer-item li {
+    color: white;
+    list-style-type:none ;
+    padding-top: 10px;
+}
+
+/* efecto linea  */
+li{
+    --border-color: white;
+    --border-color2: rgb(211, 238, 89);
+    --border-with:2px;
+    --bottom-distance:0px;
+    display: block;
+    background-image: linear-gradient(var(--border-color),var(--border-color2));
+    background-size: 0% var(--border-with);
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+}
+
+.footer-item li {
+    background-position: 0 calc(100% - var(--bottom-distance));
+    color: white;
+    width: fit-content;
+}
+
+.footer-item li:hover {
+    background-size: 100% var(--border-with);
+    cursor: pointer;
+}
+.footer-service{
+    padding-bottom: 40px;
+}
