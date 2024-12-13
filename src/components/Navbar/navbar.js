@@ -35,7 +35,11 @@ const Navbar = ()=>{
                     </Link>
                 </li>
                 <li className="navitem">Career</li>
-                <li className="navitem">Video</li>
+                <li className="navitem">
+                <Link to="video" spy={true} smooth={true} offset={-100} duration={300}>
+                        Video
+                    </Link>
+                    </li>
                 <li className="navitem">
                 <Link to="team" spy={true} smooth={true} offset={-100} duration={300}>
                         Team
@@ -48,7 +52,11 @@ const Navbar = ()=>{
                     </Link>
                 </li>
                 <li className="navitem">Home</li>
-                <li className="navitem">Feedback</li>
+                <li className="navitem">
+                <Link to="feedback" spy={true} smooth={true} offset={-100} duration={300}>
+                        Feedback
+                    </Link>
+                </li>
                 <li className="navitem">Contact</li>
                 <li className="navitem">Subscription</li>
             </ul>

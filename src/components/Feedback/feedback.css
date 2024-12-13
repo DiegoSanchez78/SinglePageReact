@@ -34,6 +34,16 @@
    align-items: center;
 }
 .slick-prev:before{
-    color:#ff854c;
+    color:#ff854c !important;
     font-size: 30px;
+}
+.slick-next:before{
+    color:#ff854c !important;
+    font-size: 30px;
+}
+
+
+.slick-prev:before{
+    /* opacity: 0; */
+    pointer-events: none;
 }

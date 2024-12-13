@@ -84,14 +84,12 @@ const Testimonial = () => {
                 </div>
             ))}
 
-            {showMorePost >= data.length ? null:(
+        </div>
+        {showMorePost >= data.length ? null:(
             <span className='load--more-button' onClick={loadMore}>
                 Ver mas
             </span>
             )}
-
-        </div>
-
     </div>
   )
 }

@@ -73,10 +73,36 @@ const Feedback = () => {
         initialSlide: 0,
         autoplay:true,
         rows:1,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     };
 
   return (
-    <div className='container feedbck-slider'>
+    <div className='container feedbck-slider' id='feedback'>
          <div className='section-title'>
                 <h5>Feedback</h5>
                 <span className='line'></span>

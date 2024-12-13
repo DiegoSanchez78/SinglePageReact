@@ -8,6 +8,8 @@ import Suscription from "./components/Suscription/Suscription";
 import Footer from "./components/Footer/Footer";
 import Team from "./components/Team/Team";
 import Feedback from "./components/Feedback/Feedback";
+import Video from "./components/Video/Video";
+import Career from "./components/Career/Career";
 import "./App.css"
 import ScrollToTop from "react-scroll-to-top"
 
@@ -19,6 +21,8 @@ function App() {
           <Home/>
           <About/>
           <Service/>
+          <Career/>
+          <Video/>
           <Team/>
           <Testimonial/>
           <Feedback/>

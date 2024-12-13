@@ -54,7 +54,7 @@ function Team() {
             
             <div className='row'>
                 {data.map((item,index)=>(
-                <div className="col-xl-4 col-lg-4 col-md-2 col-sm-12">
+                <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div className='card team-members-item'>
                         <img src={item.img} alt='team face'/>
                         <div className='team-info'>
