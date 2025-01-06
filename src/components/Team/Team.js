@@ -2,6 +2,7 @@ import React from 'react'
 import "./team.css"
 import {FaFacebookSquare,FaLinkedin  } from "react-icons/fa"
 import { FaSquareTwitter } from "react-icons/fa6"
+import Fade from 'react-reveal/Fade';
 
 function Team() {
 
@@ -51,9 +52,10 @@ function Team() {
                 <h5>Miembros de equipo</h5>
                 <span className='line'></span>
             </div>
-            
+           
             <div className='row'>
                 {data.map((item,index)=>(
+                <Fade right>
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div className='card team-members-item'>
                         <img src={item.img} alt='team face'/>
@@ -70,8 +72,10 @@ function Team() {
                     </div>
                    
                 </div>
+                </Fade>
                 ))}
             </div>
+            
 
     </div>
   )

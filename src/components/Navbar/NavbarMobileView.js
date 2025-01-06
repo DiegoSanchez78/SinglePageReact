@@ -1,23 +1,23 @@
-import React,{useState} from "react";
-import "./navbar.css"
+import React,{useState} from 'react'
+import "./navbarMobileView.css"
+import { GiHamburgerMenu } from "react-icons/gi";
 import {Link} from 'react-scroll';
 
-const Navbar = ()=>{
+function NavbarMobileView() {
 
-    const [navScrollColor, setnavScrollColor] = useState(false);
+    const [open,setOpen] = useState(false)
 
-    const onChangeNavColor = ()=> {
-        if(window.scrollY>=100){
-            setnavScrollColor(true)
-        }else{
-            setnavScrollColor(false)
-        }
+    const handleNavOpen = () =>{
+        setOpen(!open)
     };
 
-    window.addEventListener("scroll", onChangeNavColor);
+  return (
+    <div className='responsive-mobile-view'>
+        <div className='container-fluid mobile-view-header'>
+            <p><GiHamburgerMenu size={25} onClick={handleNavOpen}/></p>
+        </div>
 
-    return(
-        <nav className={navScrollColor ? "navbar-scroll-color navbar-main":"navbar-main"}>
+        {open? (<div className='mobile-nav'>
             <ul>
                 <li className="navitem">
                     <Link to="home" spy={true} smooth={true} offset={-100} duration={300}>
@@ -64,8 +64,11 @@ const Navbar = ()=>{
                 <li className="navitem">Contact</li>
                 <li className="navitem">Subscription</li>
             </ul>
-        </nav>
-    )
+        </div>):null}
+
+        
+    </div>
+  )
 }
 
-export default Navbar
+export default NavbarMobileView

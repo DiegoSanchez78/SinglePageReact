@@ -1,16 +1,19 @@
-import React from 'react'
-import { FcCollapse,FcExpand } from 'react-icons/fc'
+import React, { useState } from 'react'
+import { FcCollapse,FcExpand, FcMakeDecision } from 'react-icons/fc'
 
 
 const DataInfo = ({title,body}) => {
+
+  const [show,setShow] = useState(false)
+
   return (
-    <div className='post-card'>
+    <div className={show ? 'post-card-open': 'post-card'} onClick={()=>setShow(!show)}>
         <div className='collapse-option'>
             <h6>{title}</h6>
-            <p><FcCollapse size={20}/></p>
+            <p>{show ? <FcCollapse size={20}/>: <FcExpand size={20}/>}</p>
 
         </div>
-             <p> {body}</p>
+          <div className='description' > {show ?<p>{body}</p>:null } </div>
     </div>
   )
 }

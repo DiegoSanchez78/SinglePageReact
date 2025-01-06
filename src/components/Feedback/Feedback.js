@@ -3,6 +3,7 @@ import "./feedback.css"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Fade from 'react-reveal/Fade';
 
 const Feedback = () => {
 
@@ -111,6 +112,7 @@ const Feedback = () => {
             <div className='feedbck-slide'>
             <Slider {...settings}>
                 {data.map((item,index)=>(
+                  <Fade left>
                     <div className='col-xl-12 col-lg-12 col-md-12 col-sm-12'> 
                         <div className='card content-slider' key={index}>
                             <img src={item.img} alt='imagen carrusel' className='center-image'/>
@@ -120,6 +122,7 @@ const Feedback = () => {
                         </div>
                         
                     </div>
+                    </Fade>
                 ))}
                  </Slider>
             </div>

@@ -37,3 +37,11 @@
 .navitem .active{
     color:  yellow ;
 }
+
+
+
+@media (max-width:1000px) {
+    .navbar-main{
+        display: none;
+    }
+}

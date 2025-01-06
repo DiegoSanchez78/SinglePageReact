@@ -4,11 +4,13 @@ import "./footer.css"
 // import { FaSquareTwitter } from "react-icons/fa6"
 import {FaFacebookSquare,FaLinkedin  } from "react-icons/fa"
 import { FaSquareTwitter } from "react-icons/fa6"
+import Zoom from 'react-reveal/Zoom';
 
 const Footer = () => {
   return (
     <div className='container-fluid footer'>
         <div className='container'>
+            <Zoom>
             <div className='row'>
                 <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12'>
                     <div className='footer-about-section'>
@@ -56,6 +58,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            </Zoom>
         </div>
     </div>
   )

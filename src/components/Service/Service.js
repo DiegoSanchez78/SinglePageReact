@@ -1,6 +1,7 @@
 import React from 'react'
 import "./service.css"
 import { FcOk } from "react-icons/fc";
+import Zoom from 'react-reveal/Zoom';
 
 
 const Service = () => {
@@ -82,9 +83,10 @@ const Service = () => {
                 <h5>Servicios</h5>
                 <span className='line'></span>
             </div>
-
+            <Zoom>
             <div className='row'>
                 {servidata.map((item, index) => (
+
                     <div className='col-xl-3 col-lg-4 col-md-6 col-sm-12'>
                         <div className='services' key={index}>
                             <span className='service-number' style={{background:colors[index]}}>
@@ -105,7 +107,7 @@ const Service = () => {
                 ))}
 
             </div>
-
+            </Zoom>
         </div>
     )
 }

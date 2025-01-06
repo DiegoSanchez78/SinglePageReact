@@ -2,6 +2,14 @@
     height: 900px;
 }
 
+#dark .about-section {
+    color: white;
+}
+
+#dark .about-details{
+    background-color: #38004c;
+}
+
 @media (max-width:1000px) {
     .about-section{
         height: auto;
@@ -42,6 +50,15 @@
     -moz-box-shadow: 15px 9px 9px -2px rgba(230,224,224,0.86);
     cursor: pointer;
 }
+
+#dark .card-design{
+    background-color: #38004c;
+    margin-top: 10px;
+    box-shadow: 15px 9px 9px -2px rgba(230,224,224,0.86);
+    -webkit-box-shadow: 15px 9px 9px -2px rgba(230,224,224,0.86);
+    -moz-box-shadow: 15px 9px 9px -2px rgba(230,224,224,0.86);
+}
+
 .card-design:after{
     display: block;
     content: "";

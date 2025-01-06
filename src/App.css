@@ -52,3 +52,8 @@
     transform: rotate(360deg);
   }
 }
+
+#dark{
+  background-color: #46045e;
+  color: white;
+}
